@@ -1,0 +1,225 @@
+@import "../../../../styles/index.scss";
+
+.gym-other {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 901px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .gym-other-row {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 901px) {
+            gap: 40px;
+        }
+        .gym-treatment-bg-one {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url(/src/assets/images/pool.jpg);
+            margin: 0 0 85px 0;
+            height: 700px;
+            @media (max-width: 901px) {
+                height: 400px;
+                margin: 0;
+            }
+            @media (max-width: 601px) {
+                height: 300px;
+            }
+            @media (max-width: 401px) {
+                height: 200px;
+            }
+        }
+        .gym-treatment-bg-two {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url(/src/assets/images/sauna.jpg);
+            margin: 0px 85px 0 0;
+            height: 700px;
+            @media (max-width: 901px) {
+                height: 400px;
+                margin: 0;
+            }
+            @media (max-width: 601px) {
+                height: 300px;
+            }
+            @media (max-width: 401px) {
+                height: 200px;
+            }
+        }
+        .gym-treatment-bg-three {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url(/src/assets/images/Spa.jpg);
+            margin: 0px 0 0 85px;
+            height: 800px;
+            @media (max-width: 901px) {
+                height: 400px;
+                margin: 0;
+            }
+            @media (max-width: 601px) {
+                height: 300px;
+            }
+            @media (max-width: 401px) {
+                height: 200px;
+            }
+        }
+        .gym-treatment-bg-four {
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url(/src/assets/images/Gym.jpg);
+            margin: 85px 0 0 0;
+            height: 600px;
+            @media (max-width: 901px) {
+                height: 400px;
+                margin: 0;
+            }
+            @media (max-width: 601px) {
+                height: 300px;
+            }
+            @media (max-width: 401px) {
+                height: 200px;
+            }
+        }
+        .gym-treatment {
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: end;
+            padding: 40px 40px;
+            @media (max-width: 901px) {
+                padding: 30px 30px;
+            }
+            @media (max-width: 601px) {
+                padding: 20px 20px;
+            }
+            @media (max-width: 401px) {
+                padding: 10px 10px;
+            }
+        }
+        span {
+            @include font13;
+            font-family: "jost", serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 20px;
+            color: var(--theme-white);
+            @media (max-width: 901px) {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+            @media (max-width: 601px) {
+                font-size: 8px;
+                margin-bottom: 5px;
+            }
+            @media (max-width: 401px) {
+                font-size: 6px;
+            }
+        }
+    }
+    h5 {
+        color: var(--theme-white);
+        @include font60;
+        font-size: 50px;
+        margin-bottom: 20px;
+        @media (max-width: 901px) {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 601px) {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        @media (max-width: 401px) {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        color: var(--theme-white);
+        font-size: 16px;
+        font-family: "jost", serif;
+        margin-bottom: 20px;
+        @media (max-width: 901px) {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 601px) {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        @media (max-width: 401px) {
+            font-size: 10px;
+        }
+    }
+
+    .gym-treatment-pricing {
+        color: var(--theme-white);
+        margin-bottom: 20px;
+        @media (max-width: 901px) {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 601px) {
+            margin-bottom: 5px;
+        }
+        p {
+            font-family: "jost", serif;
+            font-size: 16px;
+            margin-bottom: 0px;
+            @media (max-width: 901px) {
+                font-size: 14px;
+
+            }
+            @media (max-width: 601px) {
+                font-size: 12px;
+            }
+            @media (max-width: 401px) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .gym-treatment-btn {
+        display: flex;
+        button {
+            background-color: transparent;
+            border: none;
+            color: var(--theme-white);
+            @include font16;
+            line-height: 25px;
+            overflow: hidden;
+            padding: 0;
+            @media (max-width: 901px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @media (max-width: 601px) {
+                font-size: 12px;
+                line-height: 15px;
+            }
+            @media (max-width: 401px) {
+                font-size: 10px;
+                line-height: 10px;
+            }
+            &:hover {
+                .border {
+                    transform: translateX(-100%);
+                }
+            }
+            .border {
+                transition: 0.2s ease-in-out;
+                border-bottom: 1px solid var(--theme-light-brown-color);
+                transform: translateX(0);
+            }
+        }
+    }
+}

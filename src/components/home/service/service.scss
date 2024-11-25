@@ -1,0 +1,155 @@
+@import "../../../styles/index.scss";
+
+.services{
+    background-color: var(--theme-bacground);
+    .services-title{
+        max-width: 650px;
+        padding-bottom: 50px;
+        span{
+            @include font12;
+            letter-spacing: 1px;
+            display: block;
+            color: var( --theme-gray);
+        }
+        h2{
+            @include font60;
+            margin: 20px 0;
+            @media (max-width:768px) {
+                font-size: 40px;
+                margin: 5px 0;
+            }
+        }
+        p{
+            @include font18;
+            font-weight: 400;
+            color: var(--theme-textblack);
+            letter-spacing: .2px;
+            @media (max-width:768px) {
+                font-size: 16px;
+                line-height: normal;
+            }
+        }
+    }
+    .services-slider{
+        padding: 0 0 100px 0;
+        .slider{
+            .slider-img{
+                position: relative;
+                width:100%;
+                height: 310px;
+                overflow: hidden;
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                img{
+                    width:100%;
+                    object-fit: cover;
+                    height: 310px;
+                    transition: .3s ease-in-out;
+                }
+                .slider-img-price{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    background-color: var(--theme-white);
+                    width: 100px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .slider-detail{
+                h3{
+                    font-family: "Marcellus", serif;
+                    font-size: 30px;
+                    margin-top: 20px;
+                }
+                .slider-sub-detail{
+                    margin:20px 0;
+                    display: flex;
+                    align-items: center;
+                    .slider-svg{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding-right: 20px;
+                        svg{
+                            width: 25px;
+                            height: 25px;
+                        }
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
+                p{
+                    @include font16;
+                    margin-bottom: 20px;
+                }
+                .services-button{
+
+                    button{
+                        border: 0;
+                        background: transparent;
+                        padding: 0;
+                        overflow: hidden;
+                        &:hover{
+                            .border{
+                                transform: translateX(-100%);
+                            }
+                        }
+                        .border{
+                            transition: .2s ease-in-out;
+                            border-bottom: 1px solid var(--theme-light-brown-color);
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.slick-slide{
+    padding: 0 20px;
+}
+.slick-list{
+    margin: 0 -20px;
+}
+.slick-dots{
+    position: absolute ;
+    bottom:-60px;
+}
+.rightarrow{
+    position: absolute;
+    right: 0;
+    top: -40px;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-white);
+    border-radius: 50px;
+    img{
+        transform: rotate(-90deg);
+    }
+}
+.leftarrow{
+    position: absolute;
+    top: -40px;
+    right: 50px;
+    z-index: 9;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-white);
+    border-radius: 50px;
+    img{
+        transform: rotate(90deg);
+    }
+}

@@ -1,0 +1,120 @@
+@import "../../../styles/index.scss";
+
+.outerview{
+    background-color:var(--theme-bacground);
+    .outerview-grid{
+        padding: 150px 0 110px 0;
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        @media (max-width:768px) {
+            padding: 50px 0 50px 0;
+            grid-template-columns: repeat( 1 , 1fr);
+        }
+        .outerview-first-grid{
+            background-image: url(../../../assets/images/img1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 600px;
+            @media (max-width:768px) {
+                height: 350px;
+            }
+            @media (max-width:576px) {
+                height: 280px;
+            }
+        }
+        .outerview-second-grid{
+            background-image: url(../../../assets/images/img2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 600px;
+            @media (max-width:768px) {
+                height: 350px;
+            }
+            @media (max-width:576px) {
+                height: 280px;
+            }
+            .outerview-second-grid-padding{
+                height: 100%;
+                width: 100%;
+                opacity: .8;
+                background-color:  #2C3529;
+                .outerview-second-grid-color{
+                    height: 100%;
+                    width: 100%;
+                    padding: 10px;
+                    .outerview-second-grid-items{
+                        border: 2px solid var(--theme-light-brown-color);   
+                        height: 100%;
+                        width: 100%;
+                        padding-top: 100px;
+                        @media (max-width:768px) {
+                            padding-top:60px ;
+                        }
+                        @media (max-width:576px) {
+                            padding-top: 45px;
+                        }
+                        p{
+                            @include font12; 
+                            text-align: center;
+                            color: var(--theme-white);
+                            padding-bottom: 10px
+                        }
+                        h1{
+                            @include font55;
+                            text-align: center;
+                            color: var(--theme-white);
+                            padding-bottom: 20px;
+                            @media (max-width:768px) {
+                                font-size: 48px;
+                            }
+                            @media (max-width:576px) {
+                                font-size: 30px;
+                            }
+                        }
+                        .outerview-second-grid-items-btn{
+                            display: flex;
+                            justify-content: center;
+                            button{
+                                background-color: transparent;
+                                border: none;
+                                color: var(--theme-white);
+                                @include font16 ;
+                                line-height: 25px;
+                                overflow: hidden;
+                                padding: 0;
+                                &:hover{
+                                    .border{
+                                        transform: translateX(-100%);
+                                    }
+                                }
+                                .border{
+                                    transition: .2s ease-in-out;
+                                    border-bottom: 1px solid var(--theme-light-brown-color);
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .outerview-third-grid{
+            background-image: url(../../../assets/images/img-3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 600px;
+            @media (max-width:768px) {
+                height: 350px;
+            }
+            @media (max-width:576px) {
+                height: 280px;
+            }
+        }
+    }
+}

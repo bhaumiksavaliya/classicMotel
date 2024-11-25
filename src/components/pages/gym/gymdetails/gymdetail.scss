@@ -1,0 +1,140 @@
+@import "../../../../styles/index.scss";
+
+
+.gym-details {
+    background-color: var(--theme-white);
+    padding: 80px 0;
+    @media (max-width: 901px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 601px) {
+        padding: 30px 0;
+    }
+    @media (max-width: 401px) {
+        padding: 20px 0;
+    }
+    
+
+    .gym-content {
+        .gym-subtitle {
+            @include font13;
+            color: var(--theme-primory-color);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            @media (max-width: 901px) {
+                font-size: 12px;    
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            @media (max-width: 601px) {
+                font-size: 10px;
+            }
+            @media (max-width: 401px) {
+                font-size: 8px;
+            }
+        }
+        .gym-content-flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width: 901px) {
+                flex-direction: column;
+            }
+            .gym-title {
+                @include font60;
+                font-size: 50px;
+                color: var(--theme-black-text);
+                margin-bottom: 10px;
+                @media (max-width: 901px) {
+                    font-size: 40px;
+                    text-align: center
+                }
+                @media (max-width: 601px) {
+                    font-size: 30px;
+                }
+                @media (max-width: 401px) {
+                    font-size: 20px;
+                }
+            }
+            .booking-title {
+                display: flex;
+                justify-content: center;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    color: var(--theme-black-text);
+                    @include font16 ;
+                    line-height: 25px;
+                    overflow: hidden;
+                    padding: 0;
+                    @media (max-width: 901px) {
+                        font-size: 14px;
+                    }
+                    @media (max-width: 601px) {
+                        font-size: 12px;
+                    }
+                    @media (max-width: 401px) {
+                        font-size: 10px;
+                    }
+                    &:hover{
+                        .border{
+                            transform: translateX(-100%);
+                        }
+                    }
+                    .border{
+                        transition: .2s ease-in-out;
+                        border-bottom: 1px solid var(--theme-light-brown-color);
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+    }
+    .gym-booking {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-content: space-between;
+        @media (max-width: 901px) {
+            grid-template-columns: 1fr;
+        }
+        .gym-description {
+            @include font18;
+            font-weight: 400;
+            color: var(--theme-gray-900-text);
+            @media (max-width: 901px) {
+                font-size: 16px;
+                text-align: center;
+                line-height: normal;
+            }
+            @media (max-width: 601px) {
+                font-size: 14px;
+            }
+            @media (max-width: 401px) {
+                font-size: 12px;
+            }
+        }
+        .booking-info {
+            @include font18;
+            font-weight: 400;
+                color: var(--theme-gray-900-text);
+            @media (max-width: 901px) {
+                font-size: 16px;
+                text-align: center;
+                line-height: normal;
+            }
+            @media (max-width: 601px) {
+                font-size: 14px;
+            }
+            @media (max-width: 401px) {
+                font-size: 12px;
+            }
+        }
+        
+    }
+
+
+
+}

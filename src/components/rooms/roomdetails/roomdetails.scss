@@ -1,0 +1,107 @@
+@import "../../../styles/index.scss";
+
+.room-details {
+    text-align: center;
+    padding: 80px 0;
+    @media (max-width: 901PX) {
+        padding: 50px 0;
+    }
+    @media (max-width: 601PX) {
+        padding: 30px 0;
+    }
+
+    .room-details-content {
+        max-width: 800px;
+        margin: 0 auto;
+        @media (max-width: 901PX) {
+            max-width: 600px;
+        }
+        @media (max-width: 601PX) {
+            max-width: 400px;
+        }
+    }
+
+    .welcome-text {
+        @include font13;
+        color: #777;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .main-title {
+        font-size: 55px;
+        font-family: "Marcellus", serif;
+        color: #333;
+        font-weight: 100;
+        max-width: 900px;
+        margin: 0 auto 30px;
+        @media (max-width: 901PX) {
+            font-size: 40px;
+        }
+        @media (max-width: 601PX) {
+            font-size: 30px;
+        }
+        @media (max-width: 401PX) {
+            font-size: 20px;
+        }
+    }
+
+    .description {
+        font-family: "Jost", serif;
+        font-size: 18px;
+        color: #333632;
+        max-width: 1000px;
+        margin: 0 auto 40px;
+        @media (max-width: 901PX) {
+            font-size: 16px;
+        }
+        @media (max-width: 601PX) {
+            font-size: 14px;
+        }
+        @media (max-width: 401PX) {
+            font-size: 12px;
+        }
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        @media (max-width: 901PX) {
+            gap: 10px;
+        }
+        @media (max-width: 601PX) {
+            gap: 5px;
+        }
+    }
+
+    .btn {
+        font-size: 17px;
+        padding: 15px 38px;
+        border: 1px solid #333;
+        background-color: transparent;
+        font-family: "Marcellus", serif;
+        color: #333;
+        cursor: pointer;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        @media (max-width: 901PX) {
+            font-size: 15px;
+            padding: 10px 30px;
+        }
+        @media (max-width: 601PX) {
+            font-size: 13px;
+            padding: 8px 25px;
+        }
+        @media (max-width: 401PX) {
+            font-size: 11px;
+            padding: 6px 20px;
+        }
+
+        &:hover {
+            border: 1px solid var(--theme-light-brown-color);
+            background-color: var(--theme-light-brown-color);
+            color: #fff;
+        }
+    }
+}

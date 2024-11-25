@@ -1,0 +1,204 @@
+@import "../../../../styles/index.scss";
+
+.foods {
+    .foodsearch-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 0;
+        @media (max-width: 640px) {
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        @media (max-width: 501px) {
+            gap: 15px;
+        }
+
+        .foodsearch-bar {
+            @media (max-width: 640px) {
+                width: 100%;
+            }
+            input {
+                padding: 12px 24px;
+                line-height: normal;
+                border-radius: 20px;
+                border: 2px solid var(--theme-black);
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+                }
+                &:focus {
+                    outline: none;
+                    box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+                    transform: translateY(-2px);
+                }
+                &::placeholder {
+                    color: var(--theme-black);
+                }
+                @media (max-width: 640px) {
+                    width: 100%;
+                }
+                @media (max-width: 501px) {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .foodsearch-item-btns {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @media (max-width: 690px) {
+                gap: 10px;
+            }
+            @media (max-width: 640px) {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .foodsearch-item-btn {
+                button {
+                    padding: 12px 24px;
+                    line-height: normal;
+                    border-radius: 20px;
+                    border: 2px solid var(--theme-black);
+                    transition: 0.3s ease-in-out;
+                    background-color: var(--theme-white);
+                    &:hover {
+                        box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+                        transform: translateY(-2px);
+                    }
+                    @media (max-width: 501px) {
+                        padding: 10px 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .foods-cards {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        padding: 30px 0;
+        height: auto;
+        @media (max-width: 1010px) {
+            gap:20px;
+        }
+        @media (max-width: 901px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 700px) {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+        @media (max-width: 501px) {
+            grid-template-columns: repeat(2, 1fr);
+            height: auto;
+        }
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                transform: scale(0.94);
+            }
+            .card-img {
+                img {
+                    border-radius: 20px;
+                    width: 100%;
+                    display: block;
+                    height: 180px;
+                    object-fit: cover;
+                    @media (max-width: 768px) {
+                        height: 140px;
+                    }
+                }
+            }
+            .card-detail {
+                padding: 0px 3px 3px 8px;
+                h5 {
+                    @include font20;
+                    font-weight: 600;
+                    padding: 4px 0;
+                    color: var(--theme-black);
+                    @media (max-width: 791px) {
+                        font-size: 18px;
+                        line-height: 18px;
+                        padding: 10px 0 5px 0;
+                    }
+                }
+                P{
+                    font-family: "Acme", sans-serif;
+                    font-weight: 200;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -0.3px;                
+                    color: rgba(2, 6, 12, 0.6);
+                    @media (max-width: 791px) {
+                        font-size: 14px;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
+
+/* Common button styles */
+.button {
+    padding: 12px 24px;
+    line-height: normal;
+    border-radius: 20px;
+    border: 2px solid var(--theme-black);
+    transition: 0.3s ease-in-out;
+    background-color: var(--theme-white);
+    &:hover {
+        box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+        transform: translateY(-2px);
+    }
+    @media (max-width: 601px) {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    @media (max-width: 501px) {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+/* Pagination container */
+.paginationbttns {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px 0;
+    list-style: none;
+    padding: 0;
+}
+
+/* Pagination buttons */
+.paginationbttns a,
+.paginationbttns span {
+    @extend .button;
+    cursor: pointer;
+    margin: 0 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Active page button */
+.paginationbttns .active {
+    color: var(--theme-black);
+    font-weight: 700;
+    transform: translateY(-2px);
+}
+
+/* Disabled buttons */
+.paginationbttns .disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
